@@ -1,0 +1,72 @@
+
+/* scale value = 1 + ((z-transform-value)*(-1)/perspective) */
+
+html,body{
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+body{
+  position: relative;
+  font-size: 3rem;
+  font-family: fantasy;
+  color: white;
+}
+
+.parallax_wrapper{
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 300px;
+}
+
+.parallax_wrapper div{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro_screen{
+   background: #2C3333;
+   z-index: 0;
+}
+
+.parallax_group div{
+  position: absolute;
+}
+
+.group1{
+  /* background: #8A39E1; */
+  position: relative;
+  transform-style: preserve-3d;
+  z-index: -1;
+}
+
+.group2{
+  background: #219F94;
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.inner{
+  transform: translateZ(-300px) scale(2);
+  background: #8A39E1;
+}
+
+.middle{
+  z-index: 0;
+  transform: translateZ(0);
+}
+
+.top{
+  transform: translateZ(210px) scale(0.3);
+}
+.outro_screen{
+  background: #2666CF;
+}
